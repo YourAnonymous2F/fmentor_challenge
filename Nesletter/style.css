@@ -13,9 +13,16 @@ body{
 .main-container{
     position: relative;
 }
-
+.span{
+    display: inline-flex;
+    position: absolute;
+    margin-top: 1px;
+    right: 57%;
+}
 .error{
     color: red;
+    font-size: 12px;
+    
 }
 
 .sub-container{
@@ -81,6 +88,7 @@ h1{
 form{
     display: flex;
     flex-direction: column;
+    /* gap: 5px; */
 }
 
 .form label{
@@ -88,8 +96,8 @@ form{
     font-size: 13px;
 }
 
-.form input{
-    margin: 10px 0;
+.form #email{
+    margin: 15px 0;
     height: 50px;
     padding: auto;
     padding-left: 15px;
@@ -220,5 +228,8 @@ form{
     }
     .message .noti #dismiss{
         margin-top: 130px;
+    }
+    .span{
+        right: 10%;
     }
 }

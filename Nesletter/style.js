@@ -7,11 +7,13 @@ function submitForm(event){
     var subContainer = document.getElementById('sub-container')
     var emailError = document.getElementById('emailError');
 
-    var emailRegex =  /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;;
+    var emailRegex =  /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
     if(!emailRegex.test(emailInput.value)) {
-        emailError.textContent = 'Valid email required'
-        emailInput.classList.add('error')
+        emailError.textContent = 'Valid email required';
+        emailInput.classList.add('error');
+        emailInput.style.border = '1px solid red';
+        
     } else {
         emailError.textContent = '';
         emailInput.classList.remove('error');
@@ -20,9 +22,11 @@ function submitForm(event){
     
         successMessage.style.display = 'flex'; 
         subContainer.style.display = 'none';
+        emailInput.style.border = '1px solid hsl(231, 7%, 60%)'
 
         document.getElementById('emailForm').reset();
     }
+
 }
 
 function showInfo(){
