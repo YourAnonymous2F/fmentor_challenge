@@ -16,10 +16,9 @@
 
 body{
     background: var(--yellow);
-}
-
-.container{
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -31,16 +30,21 @@ body{
     gap: 15px;
     background: var(--White);
     max-width: 370px;
-    margin: auto;
-    margin-top: 90px;
     padding: 15px;
-    border: 1px solid  var(--Grey);
+    border: 1px solid var(--Grey);
     border-radius: 15px;
     box-shadow: 7px 7px 1px black;
 }
 
-.subcont .image1{
+.subcont{
+    overflow: hidden;
     border-radius: 10px;
+}
+
+.subcont .image1{
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
 }
 
 .main-container .tbackground{
@@ -67,6 +71,11 @@ body{
     font-weight: 800;
 }
 
+.main-container .heading:hover{
+    cursor: pointer;
+    color: var(--yellow);
+}
+
 .main-container .heading:active{
     cursor: pointer;
     color: var(--yellow);
@@ -83,10 +92,11 @@ body{
 }
 
 .attribution{
+    display: flex;
     padding: 25px 0;
     font-size: 11px;
     text-align: center;
-    
+    gap: 1rem;
 }
 
 .attribution a{
@@ -95,17 +105,7 @@ body{
 
 @media only screen and (max-width: 375px){
     .main-container{
-        margin-top: 0;
         width: 340px;
         box-shadow: 5px 5px 1px black;
-    }
-    .subcont .image1{
-        width: 310px;
-    }
-}
-
-@media only screen and (max-width: 1440px){
-    .main-container{
-        margin-top: 100px;
     }
 }
