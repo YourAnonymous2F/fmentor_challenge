@@ -1,0 +1,111 @@
+:root{
+    --yellow: hsl(47, 88%, 63%);
+    --White: hsl(0, 0%, 100%);
+    --Grey: hsl(0, 0%, 50%);
+    --Black: hsl(0, 0%, 7%) ;
+    --a: hsl(228, 45%, 44%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Figtree', sans-serif;
+    text-decoration: none;
+}
+
+body{
+    background: var(--yellow);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    background: var(--White);
+    max-width: 370px;
+    margin: auto;
+    margin-top: 90px;
+    padding: 15px;
+    border: 1px solid  var(--Grey);
+    border-radius: 15px;
+    box-shadow: 7px 7px 1px black;
+}
+
+.subcont .image1{
+    border-radius: 10px;
+}
+
+.main-container .tbackground{
+    background-color: var(--yellow);
+    width: 80px;
+    text-align: center;
+    font-weight: 800;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.main-container .date,
+.main-container .info{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.main-container .info{
+    color: var(--Grey);
+    line-height: 1.5;
+}
+
+.main-container .heading{
+    font-weight: 800;
+}
+
+.main-container .heading:active{
+    cursor: pointer;
+    color: var(--yellow);
+}
+
+.main-container .profile{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.main-container .name{
+    font-weight: 800;
+}
+
+.attribution{
+    padding: 25px 0;
+    font-size: 11px;
+    text-align: center;
+    
+}
+
+.attribution a{
+    color: var(--a);
+}
+
+@media only screen and (max-width: 375px){
+    .main-container{
+        margin-top: 0;
+        width: 340px;
+        box-shadow: 5px 5px 1px black;
+    }
+    .subcont .image1{
+        width: 310px;
+    }
+}
+
+@media only screen and (max-width: 1440px){
+    .main-container{
+        margin-top: 100px;
+    }
+}
