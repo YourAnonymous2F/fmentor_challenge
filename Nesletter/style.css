@@ -44,6 +44,7 @@ body{
 }
 
 .container{
+    width: 45%;
     padding-left: 60px;
 }
 
@@ -73,12 +74,13 @@ h1{
 .list .options{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     padding: 6px 0;
 }
 
-.list .options h5{
+.list .options .lists{
     font-weight: 400;
+    font-size: 16px;
 }
 
 .form{
@@ -104,6 +106,10 @@ form{
     outline: none;
     border-radius: 10px;
     border: 1px solid hsl(231, 7%, 60%);
+}
+
+.form #email:active{
+    border: 1px solid black;
 }
 
 .form #submit{
@@ -170,7 +176,7 @@ form{
     cursor: pointer;
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 425px) {
     body{
         background-color: white;
     }
@@ -184,6 +190,7 @@ form{
         border-radius: 0;
     }
     .container{
+        width: 100%;
         padding: 0;
     }
     .container h1{
@@ -204,6 +211,9 @@ form{
     .container .list{
         padding: 0 25px;
         padding-top: 15px;
+    }
+    .container .list .options{
+        align-items: flex-start;
     }
     .container .form{
         padding: 0 25px;
