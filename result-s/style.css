@@ -1,0 +1,138 @@
+:root{
+    --background: hsl(0, 0%, 100%);
+    --Paleblue: hsl(221, 100%, 96%);
+    --Lightlavender: hsl(241, 100%, 89%);
+    --Darkgrayblue: hsl(224, 30%, 27%);
+    --Lightred: hsla(0, 100%, 67%, 0.2);
+    --Orangeyyellow: hsla(39, 100%, 56%, 0.2);
+    --Greenteal: hsl(166, 100%, 37%, 0.2);
+    --Cobaltblue: hsl(234, 85%, 45%, 0.2);
+    --Lightslateblueback: hsl(252, 100%, 67%);
+    --Lightroyalblueback: hsl(241, 81%, 54%);
+    --Violetbluecirc: hsla(256, 72%, 46%, 1);
+    --Persianbluecirc: hsla(241, 72%, 46%, 0);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+p{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 50px var(--Lightlavender);
+}
+
+.container1,
+.container2{
+    padding: 20px;
+    width: 50%;
+}
+
+.container1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to bottom, var(--Lightslateblueback), var(--Lightroyalblueback));
+    border-radius: 20px;
+}
+
+.container1 .result,
+.container1 .circle .number span,
+.container1 .info,
+.container2 .scores .lists .overall span{
+    color: var(--Lightlavender);
+}
+
+.container1 .result{
+    font-weight: 700;
+}
+
+.container1 .number,
+.container1 .great{
+    color: var(--background);
+}
+
+.container1 .circle{
+    background: linear-gradient(to bottom, var(--Violetbluecirc), var(--Persianbluecirc));
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    line-height: 0.4;
+    margin: 25px 0;
+}
+
+.container1 .circle :where(.number){
+    font-size: 50px;
+}
+
+.container1 .circle :where(.number) span {
+    font-size: 18px;
+}
+
+.container2 .scores .lists,
+.container2 .scores .lists .icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container2 .scores .lists .icons{
+    gap: 10px;
+}
+
+.container2 .scores .lists{
+    /* border: 1px solid var(--Lightlavender); */
+    margin: 15px 0;
+    padding: 7px 10px;
+    border-radius: 7px;
+    background: var(--Lightred);
+}
+
+.container2 .scores .list2{
+    background: var(--Orangeyyellow);
+}
+
+.container2 .scores .list3{
+    background: var(--Greenteal);
+}
+
+.container2 .scores .list4{
+    background: var(--Cobaltblue);
+}
+
+.container2 :where(.continue){
+    background: var(--Darkgrayblue);
+    color: var(--background);
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.container2 :where(.continue):hover{
+    background: var(--Lightroyalblueback);
+}
