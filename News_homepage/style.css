@@ -37,44 +37,105 @@ header{
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 1rem;
 }
 
 .navbar nav ul li a{
     font-weight: 400;
+    color: var(--dgrayishblue);
+}
+
+.navbar nav ul li a:hover{
+    color: var(--softred);
 }
 
 main .container{
     display: grid;
     margin: 25px 0;
-    gap: 1rem;
+    gap: 2rem;
     overflow: hidden;
     grid-template-columns: repeat(3, 1fr);
-    border: 1px solid black;
+    position: relative;
 }
 
 main .container .bright{
     grid-row: 2;
     grid-column: 1;
-    border: 1px solid orangered;
+}
+
+main .container .bright #bright{
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 1;
 }
 
 main .container .dive{
     grid-row: 2;
     grid-column: 2;
-    border: 1px solid orange;
+    padding: 0 10px;
+    /* position: relative; */
+}
+
+main .container .dive #dive{
+    color: var(--dgrayishblue);
+    line-height: 1.3;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+main .container .dive button{
+    background: var(--softred);
+    color: var(--backgroundcolor);
+    outline: none;
+    border: none;
+    padding: 20px 35px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1.2;
+    position: absolute;
+    bottom: 0;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+
+main .container .dive button:hover{
+    background: var(--darkblue);
 }
 
 main .container .new{
-    border: 1px solid orangered;
+    background: var(--darkblue);
     grid-column: 3;
     grid-row-start: 1;
     grid-row-end: 3;
-    padding: 15px;
+    padding: 50px 30px 0;
+}
+
+main .container .new h2{
+    color: var(--softorange);
+    font-size: 40px;
+    font-weight: 800;
+}
+
+main .container .new .info .details #heading{
+    color: var(--backgroundcolor);
+    padding: 25px 0 0;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+main .container .new .info .details #heading:hover{
+    color: var(--softorange);
+}
+
+main .container .new .info .details #subheading{
+    color: var(--grayishblue);
+    line-height: 1.7;
+    padding: 15px 0 25px;
+    font-weight: 400;
 }
 
 main .container .new .info .details{
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid var(--dgrayishblue);
 }
 
 main .container .new .info :last-child{
@@ -82,15 +143,57 @@ main .container .new .info :last-child{
 }
 
 main .container .image{
-    border: 1px solid blue;
     grid-column: span 2;
 }
 
 main .container2{
     display: grid;
-    margin: 25px 0;
+    margin: 60px 0 0;
     gap: 1rem;
     overflow: hidden;
-    grid-template-columns: repeat(3, 1fr);
-    border: 1px solid black;
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.container2 .subcontainer .product{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.container2 .subcontainer .product .project-image{
+    flex-basis: 25%;
+    height: 130px;
+}
+
+.container2 .subcontainer .product .project-image img{
+    width: 100%;
+    height: 100%;
+}
+
+.container2 .subcontainer .product .texts{
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.container2 .subcontainer .product .texts #number{
+    color: var(--grayishblue);
+    font-weight: 800;
+    font-size: 25px;
+}
+
+.container2 .subcontainer .product .texts #text1{
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.container2 .subcontainer .product .texts #text1:hover{
+    color: var(--softred);
+}
+
+.container2 .subcontainer .product .texts #text{
+    color: var(--dgrayishblue);
+    line-height: 1.5;
+    font-weight: 700;
 }
