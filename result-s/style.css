@@ -136,3 +136,7 @@ main{
 .container2 :where(.continue):hover{
     background: var(--Lightroyalblueback);
 }
+
+@media screen and (maxwidth: 360px){
+
+}
